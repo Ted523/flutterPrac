@@ -41,6 +41,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+          - assets/smiley.jpg
+
+
   # To add Flutter specific assets to your application, add an assets section,
   # like this:
   # assets:
@@ -84,3 +88,5 @@ flutter:
     androidX: true
     androidPackage: com.example.ted103
     iosBundleIdentifier: com.example.ted103
+
+

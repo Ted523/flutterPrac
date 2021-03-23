@@ -26,7 +26,7 @@ class MyHomePage extends StatelessWidget{
       appBar: AppBar
         (title: Text(this.title), 
         ),
-    body: Center(child: Text("Trial 101 First",)
+    body: Center(child: Image.asset("assets/smiley.jpg")
     ),
     );
   }
