@@ -43,6 +43,13 @@ flutter:
 
   assets:
           - assets/smiley.jpg
+          - assets/appimages/floppy.png 
+          - assets/appimages/iphone.png 
+          - assets/appimages/laptop.png 
+          - assets/appimages/pendrive.png 
+          - assets/appimages/pixel.png 
+          - assets/appimages/tablet.png
+
 
 
   # To add Flutter specific assets to your application, add an assets section,
