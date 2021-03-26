@@ -20,50 +20,39 @@ class MyHomePage extends StatelessWidget{
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
 
+  //user defined function
+  void _showDialog(BuildContext context) {
+    //flutter defined function 
+    showDialog(
+    context: context, builder: (BuildContext context) {
+      // return object of type Dialog
+      return AlertDialog(
+        title: new Text("Message"),
+        content: new Text("Ted103 Test Log Success"),
+        actions: <Widget>[
+          new FlatButton(
+            child: new Text("Close"),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(title: Text("Product Listing"),),
-    body: ListView(
-      shrinkWrap: true, padding: const EdgeInsets.fromLTRB(2.0, 10.0, 2.0, 10.0),
-      children: <Widget> [
-        ProductBox(
-          name: "iPhone",
-          description: "iPhone is the stylist phone ever",
-          price: 1000,
-          image: "iphone.png", 
-        ),
-        ProductBox(
-          name: "Pixel",
-          description: "Pixel is the most featureful phone ever",
-          price: 800,
-          image: "pixel.png", 
-        ),
-        ProductBox(
-          name: "Laptop",
-          description: "Laptop is most productive development tool",
-          price: 2000,
-          image: "laptop.png", 
-        ),
-        ProductBox(
-          name: "Tablet",
-          description: "Tablet is the most useful device ever for meeting",
-          price: 1500,
-          image: "tablet.png", 
-        ),
-        ProductBox(
-          name: "Pendrive",
-          description: "Pendrive is useful storage medium",
-          price: 100,
-          image: "pendrive.png", 
-        ),
-        ProductBox(
-          name: "Floppy Drive",
-          description: "Floppy drive is useful rescue storage medium",
-          price: 20,
-          image: "floppy.png", 
-        ),
-      ]
+    appBar: AppBar(title: Text(this.title),),
+    body: Center(
+      child: GestureDetector(
+        onTap: () {
+          _showDialog(context);
+        },
+        child: Text("Ted103 Test Log")
+      )
     )
     );
   }
